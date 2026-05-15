@@ -46,11 +46,14 @@ class autonomous_wateringRecipe(ConanFile):
         tc = CMakeToolchain(self)
 
         # feed version into to cmake
+        version_file = Path(self.build_folder) / "version.cmake"
         version_str = str(self.version).split(".")
-        tc.cache_variables["VERSION_MAJOR"] = version_str[0]
-        tc.cache_variables["VERSION_MINOR"] = version_str[1]
-        tc.cache_variables["VERSION_PATCH"] = version_str[2]
-        tc.cache_variables["VERSION_TWEAK"] = version_str[3]
+        version_file.write_text(
+            f"set(CONAN_PROJECT_VERSION_MAJOR {version_str[0]})\n"
+            f"set(CONAN_PROJECT_VERSION_MINOR {version_str[1]})\n"
+            f"set(CONAN_PROJECT_VERSION_PATCH {version_str[2]})\n"
+            f"set(CONAN_PROJECT_VERSION_TWEAK {version_str[3]})\n"
+        )
 
         # project meta
         tc.cache_variables["CONAN_PROJECT_NAME"] = self.name

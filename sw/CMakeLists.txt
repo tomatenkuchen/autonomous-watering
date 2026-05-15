@@ -21,9 +21,12 @@ include($ENV{IDF_PATH}/tools/cmake/project.cmake)
  
 ###################################################################################################
 # project definition
+
+include(${CMAKE_BINARY_DIR}/version.cmake)
+
 project(${CONAN_PROJECT_NAME}
   DESCRIPTION ${CONAN_PROJECT_DESCRIPTION}
-  VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}
+  VERSION ${CONAN_PROJECT_VERSION_MAJOR}.${CONAN_PROJECT_VERSION_MINOR}.${CONAN_PROJECT_VERSION_PATCH}
   LANGUAGES C CXX
 )
 
