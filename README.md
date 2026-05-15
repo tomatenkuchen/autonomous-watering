@@ -20,3 +20,14 @@ for now i plan to have an [ESP32C6] as the computing base.
 
 is found in [this](./sw) folder. as it is an embedded project, it fits the hardware described in the [hardware folder](./hw).
 
+## License
+
+i intent to have the software and hardware licensed for GNU GPLv2. You will find either hardware part libraries or software libraries
+licensed under different licenses (duh!), so please check the individual folders and references.
+
+
+## Liabilities
+
+this is my personal DIY project. It's supposed to be battery backed, so at least no grilling yourself on the grid issues to expected here.
+nontheless, electrical danger lurks everywhere. Consider yourself to be warned! If you hurt yourself by soldering stuff, (mis-)handling batteries,
+tripping over wires or get struck by lightning while setting up the system outside, blame yourself, not me.

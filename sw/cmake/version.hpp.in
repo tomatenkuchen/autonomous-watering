@@ -1,0 +1,26 @@
+/**
+ * @file version.hpp
+ * @brief project version info
+ * @license GNU GPLv2
+ */
+
+#pragma once
+
+#include <cstdint>
+
+namespace version{
+
+	struct Version{
+		uint8_t major;
+		uint8_t minor;
+		uint8_t patch;
+		uint8_t tweak;
+	};
+
+	constexpr static Version version = {
+		.major = @autonomous-watering_VERSION_MAJOR@,
+		.minor = @autonomous-watering_VERSION_MINOR@,
+		.patch = @autonomous-watering_VERSION_PATCH@,
+		.tweak = @autonomous-watering_VERSION_TWEAK@,
+	};
+}
