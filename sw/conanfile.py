@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 class autonomous_wateringRecipe(ConanFile):
-    name = "autonomous-watering"
+    name = "autonomouswatering"
     package_type = "application"
 
     # Optional metadata
@@ -53,11 +53,9 @@ class autonomous_wateringRecipe(ConanFile):
             f"set(CONAN_PROJECT_VERSION_MINOR {version_str[1]})\n"
             f"set(CONAN_PROJECT_VERSION_PATCH {version_str[2]})\n"
             f"set(CONAN_PROJECT_VERSION_TWEAK {version_str[3]})\n"
+            f"set(CONAN_PROJECT_NAME {self.name})\n"
+            f"set(CONAN_PROJECT_DESCRIPTION {self.description})\n"
         )
-
-        # project meta
-        tc.cache_variables["CONAN_PROJECT_NAME"] = self.name
-        tc.cache_variables["CONAN_PROJECT_DESCRIPTION"] = self.description
 
         tc.generate()
 
@@ -65,6 +63,11 @@ class autonomous_wateringRecipe(ConanFile):
         build_dir = Path(self.build_folder)
         source_dir = Path(self.source_folder)
         self.run(f"idf.py -C {source_dir} -B {build_dir} build")
+
+        # copy compile commands from build type dir to build dir
+        cc_path = build_dir / "compile_commands.json"
+        cc_path.copy(build_dir / ".." / "compile_commands.json")
+        
 
     def package(self):
         """instead of packaging anything, we can use this to flash"""

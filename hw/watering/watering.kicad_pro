@@ -648,13 +648,17 @@
         "uuid": "cfeeaa6f-be25-403f-b03c-39be367d5a74"
       }
     ],
-    "used_designators": "",
+    "used_designators": "AE1,U1-2,J1-2",
     "variants": []
   },
   "sheets": [
     [
       "cfeeaa6f-be25-403f-b03c-39be367d5a74",
       "Root"
+    ],
+    [
+      "c662fbd5-fac2-45b5-8223-e343901acf6f",
+      "valves"
     ]
   ],
   "text_variables": {},

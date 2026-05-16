@@ -14,25 +14,29 @@ namespace {
 
 const static char *TAG = "main";
 
+std::array<bsp::adc::ChannelConfig, 2> adc_channels = {
+    {
+        {
+            .channel = ADC_CHANNEL_2,
+            .atten = ADC_ATTEN_DB_0,
+            .bitwidth = ADC_BITWIDTH_12,
+        },
+        {
+            .channel = ADC_CHANNEL_3,
+            .atten = ADC_ATTEN_DB_0,
+            .bitwidth = ADC_BITWIDTH_12,
+        },
+    },
+};
+
 } // namespace
 
 extern "C" void app_main() {
-  bsp::Adc<2> adc(ADC_UNIT_1, {
-                                  {
-                                      .channel = ADC_CHANNEL_2,
-                                      .atten = ADC_ATTEN_DB_0,
-                                      .bitwidth = ADC_BITWIDTH_12,
-                                  },
-                                  {
-                                      .channel = ADC_CHANNEL_3,
-                                      .atten = ADC_ATTEN_DB_0,
-                                      .bitwidth = ADC_BITWIDTH_12,
-                                  },
-                              });
+  bsp::adc::Adc<2> adc(ADC_UNIT_1, adc_channels);
 
   while (true) {
     vTaskDelay(pdMS_TO_TICKS(1000));
-    uint32_t voltage0 = adc.get_voltage_mV(0);
-    uint32_t voltage1 = adc.get_voltage_mV(1);
+    int voltage0 = adc.get_voltage_mV(0);
+    int voltage1 = adc.get_voltage_mV(1);
   }
 }
