@@ -39,7 +39,7 @@ public:
 
 private:
   static constexpr const char *TAG = "Adc";
-  adc_oneshot_unit_handle_t adc_handle;
+  adc_oneshot_unit_handle_t adc_handle = nullptr;
   std::array<ChannelConfig, channels> adc_channels;
   std::array<adc_cali_handle_t, channels> adc_cali_handles;
 };
@@ -47,17 +47,17 @@ private:
 template <uint8_t channels>
 Adc<channels>::Adc(adc_unit_t unit,
                    std::array<ChannelConfig, channels> adc_channels)
-    : adc_channels(adc_channels) {
-
+    : adc_handle(nullptr), adc_channels(adc_channels) {
   // init adc peripheal
   ESP_LOGI(TAG, "init adc peripheal");
-  adc_oneshot_unit_handle_t adc1_handle;
+  adc_oneshot_unit_handle_t adc1_handle = nullptr;
   adc_oneshot_unit_init_cfg_t init_config1 = {
       .unit_id = unit,
-      .clk_src = ADC_RTC_CLK_SRC_DEFAULT,
-      .ulp_mode = ADC_ULP_MODE_RISCV,
+      .clk_src = ADC_DIGI_CLK_SRC_XTAL,
+      .ulp_mode = ADC_ULP_MODE_DISABLE,
   };
   ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config1, &adc1_handle));
+  adc_handle = adc1_handle;
 
   // init adc channels
   for (auto channel : adc_channels) {
@@ -73,13 +73,15 @@ Adc<channels>::Adc(adc_unit_t unit,
   for (auto cal : std::views::zip(adc_channels, adc_cali_handles)) {
     auto [channel, handle] = cal;
 
-    adc_cali_line_fitting_config_t cali_config = {
+    adc_cali_curve_fitting_config_t cali_config = {
         .unit_id = unit,
+        .chan = channel.channel,
         .atten = channel.atten,
         .bitwidth = channel.bitwidth,
-        .default_vref = 0,
     };
-    auto const ret = adc_cali_create_scheme_line_fitting(&cali_config, &handle);
+
+    auto const ret =
+        adc_cali_create_scheme_curve_fitting(&cali_config, &handle);
     if (ret == ESP_OK) {
       ESP_LOGI(TAG, "Calibration Success");
     } else if (ret == ESP_ERR_NOT_SUPPORTED) {
@@ -92,12 +94,14 @@ Adc<channels>::Adc(adc_unit_t unit,
 
 template <uint8_t channels> Adc<channels>::~Adc() {
   // deinit adc
-  ESP_ERROR_CHECK(adc_oneshot_del_unit(adc_handle));
+  if (adc_handle) {
+    ESP_ERROR_CHECK(adc_oneshot_del_unit(adc_handle));
+  }
 
   // remove calibration
   for (auto cali : adc_cali_handles) {
-    ESP_LOGI(TAG, "deregister %s calibration scheme", "Line Fitting");
-    ESP_ERROR_CHECK(adc_cali_delete_scheme_line_fitting(cali));
+    ESP_LOGI(TAG, "deregister %s calibration scheme", "Curve Fitting");
+    ESP_ERROR_CHECK(adc_cali_delete_scheme_curve_fitting(cali));
   }
 }
 
