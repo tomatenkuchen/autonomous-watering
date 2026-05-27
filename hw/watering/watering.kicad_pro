@@ -648,7 +648,7 @@
         "uuid": "cfeeaa6f-be25-403f-b03c-39be367d5a74"
       }
     ],
-    "used_designators": "R1-2,Y1,J1-2,U1-2,C1-4,AE1",
+    "used_designators": "BT1,TH1,L1-3,JP1-2,SC1,R1-13,Y1,J1-3,U1-4,D1-3,C1-13,AE1",
     "variants": []
   },
   "sheets": [
@@ -659,6 +659,18 @@
     [
       "c662fbd5-fac2-45b5-8223-e343901acf6f",
       "valves"
+    ],
+    [
+      "16cf7c18-cb1d-41f0-89f2-0e82671466a1",
+      "controller"
+    ],
+    [
+      "618729c2-2044-4b2a-920d-2470c2d6b979",
+      "valves1"
+    ],
+    [
+      "dc41958e-1f08-40e2-b7ec-874562e0f9ea",
+      "solar"
     ]
   ],
   "text_variables": {},
