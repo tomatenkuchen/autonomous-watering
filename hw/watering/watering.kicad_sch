@@ -4,6 +4,13 @@
 	(generator_version "10.0")
 	(uuid "cfeeaa6f-be25-403f-b03c-39be367d5a74")
 	(paper "A4")
+	(title_block
+		(title "autonomous-watering")
+		(date "2026-05-27")
+		(rev "0")
+		(company "tomatenkuchen")
+		(comment 1 "https://github.com/tomatenkuchen/autonomous-watering")
+	)
 	(lib_symbols
 		(symbol "Connector:USB_C_Receptacle"
 			(pin_names
@@ -1298,16 +1305,16 @@
 		)
 	)
 	(junction
-		(at 264.16 21.59)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1020c209-4ba3-4dd5-8aca-ca05869b2b87")
-	)
-	(junction
 		(at 204.47 161.29)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "11dcec03-3c2f-4f71-9796-79bd6f02fa34")
+	)
+	(junction
+		(at 266.7 19.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4141b3f0-892d-4227-9e13-f30885048ee1")
 	)
 	(junction
 		(at 40.64 161.29)
@@ -1316,34 +1323,22 @@
 		(uuid "5c7ca96f-674e-4ed0-b506-2def28fb41f5")
 	)
 	(junction
+		(at 237.49 21.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6a61fc2c-080b-4abf-9725-5125a4b98766")
+	)
+	(junction
 		(at 205.74 19.05)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "70b705c6-f304-4b51-8f61-ccf5acd651a2")
 	)
 	(junction
-		(at 266.7 19.05)
+		(at 264.16 21.59)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "77029e3d-06a0-4585-a8ed-5a872d57ddb7")
-	)
-	(junction
-		(at 240.03 19.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "91cd3eb4-74cd-41e1-90cf-c197e053f949")
-	)
-	(junction
-		(at 238.76 161.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "95a61839-15f4-49a4-ba8f-15bdcf611271")
-	)
-	(junction
-		(at 237.49 21.59)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "95dd520d-ac7d-4d05-8480-6a86435333a0")
+		(uuid "70df0082-ce5c-476c-9617-ec8daa4db8cf")
 	)
 	(junction
 		(at 57.15 90.17)
@@ -1355,7 +1350,7 @@
 		(at 265.43 161.29)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a2641e48-8825-4ba4-acd8-437f7370c1fd")
+		(uuid "a41fdf07-aeff-4932-9270-020f80683b41")
 	)
 	(junction
 		(at 66.04 161.29)
@@ -1368,6 +1363,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c1e10e83-6b05-43fb-bd14-4579663f1e37")
+	)
+	(junction
+		(at 238.76 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb1bb40b-ac08-46de-86e2-818d35c34820")
+	)
+	(junction
+		(at 240.03 19.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dcf4fbc0-a053-4c91-b609-a6bd17814a1b")
 	)
 	(junction
 		(at 172.72 21.59)
@@ -1483,7 +1490,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 83.82) (xy 240.03 19.05)
+			(xy 240.03 78.74) (xy 240.03 19.05)
 		)
 		(stroke
 			(width 0)
@@ -1523,16 +1530,6 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 95.25) (xy 227.33 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1939fc26-36c4-46eb-b257-44378a66e9a4")
-	)
-	(wire
-		(pts
 			(xy 66.04 161.29) (xy 173.99 161.29)
 		)
 		(stroke
@@ -1563,7 +1560,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 124.46) (xy 254 124.46)
+			(xy 224.79 105.41) (xy 254 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1723,7 +1720,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 113.03) (xy 266.7 19.05)
+			(xy 266.7 93.98) (xy 266.7 19.05)
 		)
 		(stroke
 			(width 0)
@@ -1753,7 +1750,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 135.89) (xy 265.43 161.29)
+			(xy 265.43 116.84) (xy 265.43 161.29)
 		)
 		(stroke
 			(width 0)
@@ -1873,7 +1870,7 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 83.82) (xy 237.49 21.59)
+			(xy 237.49 78.74) (xy 237.49 21.59)
 		)
 		(stroke
 			(width 0)
@@ -1943,7 +1940,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 106.68) (xy 238.76 161.29)
+			(xy 238.76 101.6) (xy 238.76 161.29)
 		)
 		(stroke
 			(width 0)
@@ -2063,16 +2060,6 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 90.17) (xy 217.17 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dc7c0063-a7e9-4323-a5af-bd7b10612b75")
-	)
-	(wire
-		(pts
 			(xy 203.2 81.28) (xy 203.2 21.59)
 		)
 		(stroke
@@ -2103,7 +2090,7 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 113.03) (xy 264.16 21.59)
+			(xy 264.16 93.98) (xy 264.16 21.59)
 		)
 		(stroke
 			(width 0)
@@ -2123,7 +2110,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 91.44) (xy 224.79 124.46)
+			(xy 224.79 91.44) (xy 224.79 105.41)
 		)
 		(stroke
 			(width 0)
@@ -2143,7 +2130,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 90.17) (xy 217.17 90.17)
+			(xy 215.9 90.17) (xy 227.33 90.17)
 		)
 		(stroke
 			(width 0)
@@ -2263,7 +2250,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5k1"
+		(property "Value" "4k7"
 			(at 66.04 152.654 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2344,7 +2331,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5k1"
+		(property "Value" "4k7"
 			(at 60.96 152.654 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2869,7 +2856,7 @@
 		)
 	)
 	(sheet
-		(at 254 113.03)
+		(at 254 93.98)
 		(size 21.59 22.86)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2885,7 +2872,7 @@
 		)
 		(uuid "618729c2-2044-4b2a-920d-2470c2d6b979")
 		(property "Sheetname" "valves1"
-			(at 254 112.3184 0)
+			(at 254 93.2684 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2896,7 +2883,7 @@
 			)
 		)
 		(property "Sheetfile" "valves.kicad_sch"
-			(at 254 136.4746 0)
+			(at 254 117.4246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2907,7 +2894,7 @@
 			)
 		)
 		(pin "+3V3" input
-			(at 264.16 113.03 90)
+			(at 264.16 93.98 90)
 			(uuid "da061720-dc4b-4133-98f7-33bed61ae048")
 			(effects
 				(font
@@ -2917,7 +2904,7 @@
 			)
 		)
 		(pin "+5V" input
-			(at 266.7 113.03 90)
+			(at 266.7 93.98 90)
 			(uuid "fc91e71e-1f7a-4f6d-8b16-7a4b8b8bc29b")
 			(effects
 				(font
@@ -2927,7 +2914,7 @@
 			)
 		)
 		(pin "GND" input
-			(at 265.43 135.89 270)
+			(at 265.43 116.84 270)
 			(uuid "9c2555d2-310c-4482-817a-42a908c86b4f")
 			(effects
 				(font
@@ -2937,7 +2924,7 @@
 			)
 		)
 		(pin "v_en" input
-			(at 254 124.46 180)
+			(at 254 105.41 180)
 			(uuid "9fe79fa2-96d9-44a6-8213-c86671fb2d83")
 			(effects
 				(font
@@ -2955,7 +2942,7 @@
 		)
 	)
 	(sheet
-		(at 227.33 83.82)
+		(at 227.33 78.74)
 		(size 21.59 22.86)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2971,7 +2958,7 @@
 		)
 		(uuid "c662fbd5-fac2-45b5-8223-e343901acf6f")
 		(property "Sheetname" "valves"
-			(at 227.33 83.1084 0)
+			(at 227.33 78.0284 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2982,7 +2969,7 @@
 			)
 		)
 		(property "Sheetfile" "valves.kicad_sch"
-			(at 227.33 107.2646 0)
+			(at 227.33 102.1846 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2993,7 +2980,7 @@
 			)
 		)
 		(pin "+3V3" input
-			(at 237.49 83.82 90)
+			(at 237.49 78.74 90)
 			(uuid "164fbfda-c933-48fe-90e9-0e3fced8b9ce")
 			(effects
 				(font
@@ -3003,7 +2990,7 @@
 			)
 		)
 		(pin "+5V" input
-			(at 240.03 83.82 90)
+			(at 240.03 78.74 90)
 			(uuid "78ffc7cf-1d71-44c4-a581-9f6716bdf830")
 			(effects
 				(font
@@ -3013,7 +3000,7 @@
 			)
 		)
 		(pin "GND" input
-			(at 238.76 106.68 270)
+			(at 238.76 101.6 270)
 			(uuid "8ca63b80-12ea-4b16-9f46-bb337174b6ce")
 			(effects
 				(font
@@ -3023,7 +3010,7 @@
 			)
 		)
 		(pin "v_en" input
-			(at 227.33 95.25 180)
+			(at 227.33 90.17 180)
 			(uuid "24596827-e03f-4b3a-8233-e632dd342a95")
 			(effects
 				(font
@@ -3108,7 +3095,7 @@
 				(justify left)
 			)
 		)
-		(pin "interrupt" input
+		(pin "interrupt" tri_state
 			(at 162.56 129.54 180)
 			(uuid "aaa0b8d9-be97-460c-b9ae-53c8bc50be5d")
 			(effects
@@ -3156,6 +3143,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "V_out" output
+			(at 177.8 114.3 90)
+			(uuid "75124176-baf3-461e-981f-e6aed9e25709")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
