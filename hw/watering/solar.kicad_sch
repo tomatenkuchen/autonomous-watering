@@ -3518,7 +3518,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579706381316128768-C25804.pdf?response-content-disposition=attachment%3B%20filename%3DC25804.pdf%3B%20filename%2A%3DUTF-8%27%27C25804.pdf&x-oss-date=20260604T182440Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nhDvTiu55L8aayRHLFsEERZtthpKj%2B0Dz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qeRniENA4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWhri1Udu3tHD0eS19jklBdzSlusJRAJJUVBflCeKEaRNSAd3WGhEfM2%2BBt4QT30w5N2u00S8OSMIOONBvqKWD5sagAGpldF62iBeHzrNV%2BHnUyjaA64BCjacRbVbSjmxSgiuNX1d%2FbCnqQV25prdqNhtDbAKCoRnNQDFNxmhLIIUUcffM9eG3oRc44RNhyi7hADN6z1ILjt6TEoRuXkDAYH1u8iyrE2YQDMkq7F3Cke8dxQ44PYZqWefci6GHDzQ1pzPpiAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZTENVVAjFdYFTtTADjTMKmU2%2F20260604%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=78c2b620008555fdaf271c3d0b7682edd0aca7d23428d31f63338848e1713cab"
 			(at 250.19 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -3529,7 +3529,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "C25804"
 			(at 250.19 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -4254,7 +4254,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "45k"
+		(property "Value" "47k"
 			(at 259.334 137.16 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4276,7 +4276,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579706364622934016-C25819.pdf?response-content-disposition=attachment%3B%20filename%3DC25819.pdf%3B%20filename%2A%3DUTF-8%27%27C25819.pdf&x-oss-date=20260604T212703Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5qGBvnBmah58ZCnSW2IvnU%2FOOZNta3duzz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qc9%2FokVA4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWqrvQN5iAnSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILjrImKKWD5sagAFp6e2CTF5gXCAetl%2FZznzBeiqXvbdtrNp24XwBckBwOk4pCo9PLwSFMgOtQSf5U6kP%2F%2Bd1fI%2BKr022AwW2hsiCSfA6ItkAjrYqmnkpM1k6ce1E8ls7kKfeT%2Fq%2FikPDk77ij56kdNpXvKHTlexuI%2FHtV9DEGaEJEWVb894cTL2j2iAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NY3MCutwXFRLKK9Zuj4iaZhvY%2F20260604%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=39443662dce0733909bc9974c7f7cc05e9a3997f7aeb5536bfa6dcd917da7abb"
 			(at 257.81 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -4287,7 +4287,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "C25819"
 			(at 257.81 137.16 0)
 			(hide yes)
 			(show_name no)
