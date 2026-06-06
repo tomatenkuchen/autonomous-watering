@@ -648,7 +648,7 @@
         "uuid": "cfeeaa6f-be25-403f-b03c-39be367d5a74"
       }
     ],
-    "used_designators": "SW1-2,BT1-2,TH1,L1-6,JP1-2,SC1,R1-13,Y1-2,J1-4,U1-6,D1-7,C1-35,AE1",
+    "used_designators": "SW1-2,BT1-2,TH1,L1-7,JP1-2,SC1,R1-28,Y1-2,J1-4,U1-9,D1-7,C1-35,AE1",
     "variants": []
   },
   "sheets": [
@@ -671,6 +671,18 @@
     [
       "dc41958e-1f08-40e2-b7ec-874562e0f9ea",
       "solar"
+    ],
+    [
+      "0c38be7e-16ff-4db3-816b-8834aff51f07",
+      "current_meas"
+    ],
+    [
+      "83e10298-5884-4cef-b7b0-0ad7a978535a",
+      "current_meas1"
+    ],
+    [
+      "f84e8c3f-9b73-476a-9599-3f086ccf243e",
+      "ldo"
     ]
   ],
   "text_variables": {},
