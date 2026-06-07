@@ -335,16 +335,16 @@
 		)
 	)
 	(junction
-		(at 142.24 135.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0255b357-afbe-4c81-881c-55306f4ef4ad")
-	)
-	(junction
 		(at 121.92 20.32)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "03878abf-b6f9-4097-a390-c28bebefc5ed")
+	)
+	(junction
+		(at 142.24 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0d3c9ab2-75a1-46a4-8dc3-d159445a46af")
 	)
 	(junction
 		(at 142.24 22.86)
@@ -359,16 +359,16 @@
 		(uuid "35a5b41a-f27a-44d6-b2eb-7202571cef4e")
 	)
 	(junction
+		(at 142.24 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "48a240f9-5578-40e6-b3f2-4e2fd05f1257")
+	)
+	(junction
 		(at 121.92 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "76a46a66-1b69-4959-854b-1c7a46f2bb78")
-	)
-	(junction
-		(at 142.24 162.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a99556c7-9ead-4e85-a666-06723eed1c92")
 	)
 	(junction
 		(at 121.92 140.97)
@@ -524,7 +524,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 138.43) (xy 142.24 135.89)
+			(xy 142.24 147.32) (xy 142.24 135.89)
 		)
 		(stroke
 			(width 0)
@@ -534,7 +534,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 146.05) (xy 142.24 162.56)
+			(xy 142.24 154.94) (xy 142.24 162.56)
 		)
 		(stroke
 			(width 0)
@@ -777,7 +777,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 142.24 142.24 0)
+		(at 142.24 151.13 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -787,7 +787,7 @@
 		(dnp no)
 		(uuid "f361fa86-ce8d-4a3d-9761-297420dc45e9")
 		(property "Reference" "C16"
-			(at 142.748 140.208 0)
+			(at 142.748 149.098 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -798,7 +798,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 142.748 144.78 0)
+			(at 142.748 153.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -809,7 +809,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 143.2052 146.05 0)
+			(at 143.2052 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -820,7 +820,7 @@
 			)
 		)
 		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8556213788455567360-C15849.pdf?response-content-disposition=attachment%3B%20filename%3DC15849.pdf%3B%20filename%2A%3DUTF-8%27%27C15849.pdf&x-oss-date=20260604T201738Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5rnDe%2F5h6h02fGfW1HcsFYmaelfp6rpszz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qeACnUZA4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWhqD30JB3tHD0eS19jklBdzSlusJRAJJUVBflCeKEaRNSAd3WGhEfM2%2BBt4QT30w5N2u00S8OSMIc%2BkdiqKWD5sagAFWQNkecW6D1E4coUzPadT7SCc3f42V3X5rSfMFH84ElX%2BTmNGNYscgqDx0xyaTJyyrM%2BFQW4w%2FhWX4qrYQWwgwoGw%2BQzNTMlILHbcsYIbLhGAndRWnhNlBy%2F%2FsrfRbXWVyCjftSb4xwrnr%2BixQsq7hkcXqmYOc23lG%2B0BooZpCuSAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NYRFUMjwUn3tYwmTVsefsHoBQ%2F20260604%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=f7f3fdbb1b5574cda7c663cf4e84bef841ee38f93673a2b4cff19ca4130e6e09"
-			(at 142.24 142.24 0)
+			(at 142.24 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -831,7 +831,7 @@
 			)
 		)
 		(property "Description" "C15849"
-			(at 142.24 142.24 0)
+			(at 142.24 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

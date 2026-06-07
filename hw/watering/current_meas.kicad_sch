@@ -1033,7 +1033,7 @@
 		)
 		(uuid "65fc4800-01da-422e-bac2-cd49cc4c7700")
 	)
-	(hierarchical_label "+3V3"
+	(hierarchical_label "V_in"
 		(shape input)
 		(at 275.59 24.13 0)
 		(effects
@@ -1042,7 +1042,7 @@
 			)
 			(justify left)
 		)
-		(uuid "66f434fc-3251-475d-af69-70a68e96914d")
+		(uuid "7f638ea5-dc35-420d-b90e-f5807080dc71")
 	)
 	(hierarchical_label "GND"
 		(shape input)
@@ -1066,6 +1066,17 @@
 		)
 		(uuid "afd35bf9-cb13-4a7a-97c1-757273f1f234")
 	)
+	(hierarchical_label "V_in"
+		(shape input)
+		(at 19.05 24.13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c5e50765-ab0a-423b-b6ca-aea462ffefc1")
+	)
 	(hierarchical_label "GND"
 		(shape input)
 		(at 275.59 160.02 0)
@@ -1087,17 +1098,6 @@
 			(justify right)
 		)
 		(uuid "e1cfa79d-8465-40fd-9180-33bfbbc95337")
-	)
-	(hierarchical_label "+3V3"
-		(shape input)
-		(at 19.05 24.13 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e7e49bd9-a746-40e0-a44c-aea4874fa1bd")
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:MCP6002-xSN")
