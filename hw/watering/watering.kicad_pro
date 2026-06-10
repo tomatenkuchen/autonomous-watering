@@ -60,16 +60,22 @@
           "hatch_smoothing_level": 0,
           "hatch_smoothing_value": 0.1,
           "hatch_thickness": 1.0,
-          "min_clearance": 0.5,
+          "min_clearance": 0.15,
           "min_island_area": 10.0,
-          "min_thickness": 0.25,
-          "pad_connection": 1,
+          "min_thickness": 0.15,
+          "pad_connection": 2,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -203,7 +209,13 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.15,
+        0.3,
+        0.5,
+        1.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -230,7 +242,16 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.6,
+          "drill": 0.3
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -495,7 +516,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.15,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -506,7 +527,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.15,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -648,7 +669,7 @@
         "uuid": "cfeeaa6f-be25-403f-b03c-39be367d5a74"
       }
     ],
-    "used_designators": "SW1-2,BT1-2,TH1,L1-7,JP1-2,SC1,R1-30,Y1-2,J1-4,U1-9,D1-7,C1-35,AE1",
+    "used_designators": "Q1,C1-36,D1-8,U1-11,J1-6,Y1-2,R1-43,SC1,JP1-2,L1-8,TH1,BT1-2,AE1,SW1-2",
     "variants": []
   },
   "sheets": [
@@ -683,6 +704,14 @@
     [
       "f84e8c3f-9b73-476a-9599-3f086ccf243e",
       "ldo"
+    ],
+    [
+      "01ad8ea1-dbdc-414e-a8d3-9d3f0437807e",
+      "conductivity"
+    ],
+    [
+      "b2a13f98-e24d-413a-9d82-a9f3b1868457",
+      "current_meas"
     ]
   ],
   "text_variables": {},
