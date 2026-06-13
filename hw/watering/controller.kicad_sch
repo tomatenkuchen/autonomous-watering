@@ -4025,6 +4025,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 228.6 143.51 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0d2852ee-93f3-4a18-b238-81e6254ad36a")
+		(property "Reference" "SW3"
+			(at 227.076 136.144 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "KMS221GLFS"
+			(at 229.87 128.016 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_TS-1088-xR020"
+			(at 223.52 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588903737833873408-C221698.pdf?response-content-disposition=attachment%3B%20filename%3DC221698.pdf%3B%20filename%2A%3DUTF-8%27%27C221698.pdf&x-oss-date=20260604T163458Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5rgEov%2B1Z5Y5IPeVHLE03MEOcpBm6iagzz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qaJ7%2B39A4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWsrkxPosAnSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIBfjYxKKWD5sagAGJZBLg4dXI2cxwZhpjHr9vfG2bcnPeD2ZekO6CLDE470zoyla87k22%2FMfMgD7nSJvKHKZxx7wRTJR2C%2FIed5gUddUWOOyzyialMQCX42pgq2cGFbW2xRzddJF8rKP5p2z7HTq0AIZLZQQExEqwnA3Me1xxudMxwbz09i63yKlbRSAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NYUY1J8AySA5VTu7sQ5Emtm1a%2F20260604%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=0287d07f1d74dc173e35fdd16bbbdb40a7eb09e1df544025205ab3d6ea2886b8"
+			(at 223.52 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "C720477"
+			(at 228.6 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "819477b0-4c0a-4e23-bad7-2184068c1279")
+		)
+		(pin "2"
+			(uuid "a635c3bb-9d8f-4465-8e69-5c876870dc21")
+		)
+		(instances
+			(project "watering"
+				(path "/cfeeaa6f-be25-403f-b03c-39be367d5a74/16cf7c18-cb1d-41f0-89f2-0e82671466a1"
+					(reference "SW3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 27.94 142.24 0)
 		(unit 1)
@@ -4588,7 +4669,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_CK_KMS2xxGP"
+		(property "Footprint" "Button_Switch_SMD:SW_SPST_TS-1088-xR020"
 			(at 102.87 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -4610,7 +4691,7 @@
 				)
 			)
 		)
-		(property "Description" "C221698"
+		(property "Description" "C720477"
 			(at 107.95 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -5073,87 +5154,6 @@
 			(project "watering"
 				(path "/cfeeaa6f-be25-403f-b03c-39be367d5a74/16cf7c18-cb1d-41f0-89f2-0e82671466a1"
 					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 228.6 143.51 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b2f5d7b1-f18c-47b8-a86d-ba0187f434ab")
-		(property "Reference" "SW1"
-			(at 227.076 136.144 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "KMS221GLFS"
-			(at 229.87 128.016 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_CK_KMS2xxGP"
-			(at 223.52 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8588903737833873408-C221698.pdf?response-content-disposition=attachment%3B%20filename%3DC221698.pdf%3B%20filename%2A%3DUTF-8%27%27C221698.pdf&x-oss-date=20260604T163458Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5rgEov%2B1Z5Y5IPeVHLE03MEOcpBm6iagzz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qaJ7%2B39A4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWsrkxPosAnSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIBfjYxKKWD5sagAGJZBLg4dXI2cxwZhpjHr9vfG2bcnPeD2ZekO6CLDE470zoyla87k22%2FMfMgD7nSJvKHKZxx7wRTJR2C%2FIed5gUddUWOOyzyialMQCX42pgq2cGFbW2xRzddJF8rKP5p2z7HTq0AIZLZQQExEqwnA3Me1xxudMxwbz09i63yKlbRSAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NYUY1J8AySA5VTu7sQ5Emtm1a%2F20260604%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=0287d07f1d74dc173e35fdd16bbbdb40a7eb09e1df544025205ab3d6ea2886b8"
-			(at 223.52 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "C221698"
-			(at 228.6 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "eaa2d229-5557-4f10-bbc1-6f97acac58e9")
-		)
-		(pin "2"
-			(uuid "9e9899cd-68b0-4ff1-93df-d903923aeaa1")
-		)
-		(instances
-			(project "watering"
-				(path "/cfeeaa6f-be25-403f-b03c-39be367d5a74/16cf7c18-cb1d-41f0-89f2-0e82671466a1"
-					(reference "SW1")
 					(unit 1)
 				)
 			)
