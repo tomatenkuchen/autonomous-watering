@@ -1481,22 +1481,22 @@
 		(uuid "03f9c332-190c-4e67-8315-1ffc150d8516")
 	)
 	(junction
-		(at 77.47 248.92)
+		(at 107.95 248.92)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0773fef0-51e4-425a-a7f1-2d7b0b6b1387")
+		(uuid "08c29392-a517-427f-90cb-0bfcb3deb034")
+	)
+	(junction
+		(at 107.95 228.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0e9435ef-a3ed-40de-a8b5-632b3a1897fb")
 	)
 	(junction
 		(at 330.2 248.92)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "11dcec03-3c2f-4f71-9796-79bd6f02fa34")
-	)
-	(junction
-		(at 107.95 248.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1c48d05c-a97a-478a-9f37-67b98d1ee950")
 	)
 	(junction
 		(at 58.42 173.99)
@@ -1509,12 +1509,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "55c2d2bd-2e82-4919-9e11-163a8aa75a64")
-	)
-	(junction
-		(at 113.03 229.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "57c5874a-9612-4119-8a81-a403ed5aac73")
 	)
 	(junction
 		(at 41.91 248.92)
@@ -1535,12 +1529,6 @@
 		(uuid "66c4fee2-f034-41b7-a2a3-5f16c84dcc5e")
 	)
 	(junction
-		(at 113.03 248.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6d153c40-c58d-4149-aa3b-4a83d623e084")
-	)
-	(junction
 		(at 214.63 248.92)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1551,12 +1539,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "87fbdf33-84aa-40ee-bad0-13fc3a308ddc")
-	)
-	(junction
-		(at 107.95 19.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8de40be4-e7d0-4554-95ea-8b39d7687f2e")
 	)
 	(junction
 		(at 330.2 21.59)
@@ -1583,10 +1565,10 @@
 		(uuid "aadae603-deda-422b-8053-c6d612b64496")
 	)
 	(junction
-		(at 77.47 243.84)
+		(at 113.03 248.92)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "acbef012-4221-4621-a10b-bf9ba71dee72")
+		(uuid "ab63ce1c-ad7c-4d01-880b-9981cccfbb38")
 	)
 	(junction
 		(at 67.31 248.92)
@@ -1607,28 +1589,28 @@
 		(uuid "c1e10e83-6b05-43fb-bd14-4579663f1e37")
 	)
 	(junction
-		(at 95.25 248.92)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c24d8de0-963e-4245-a43d-531b32abcb0a")
-	)
-	(junction
 		(at 58.42 179.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c65d3e59-b885-42db-b0af-06e453c57c7d")
 	)
 	(junction
-		(at 95.25 243.84)
+		(at 113.03 228.6)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "cb53eb5e-2a09-4027-aa2a-59410eca58d6")
+		(uuid "cfd66ee5-d895-4c51-b6f3-019e96ebc487")
 	)
 	(junction
 		(at 95.25 177.8)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d4fd76c2-e83e-4688-adde-911c6dea4b1b")
+	)
+	(junction
+		(at 107.95 19.05)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "da3dd8dd-d6e0-4b1b-bd9c-174d9b51fda2")
 	)
 	(junction
 		(at 386.08 248.92)
@@ -1643,26 +1625,10 @@
 		(uuid "edd2bcf2-5e9d-4723-885d-df742d4b4386")
 	)
 	(junction
-		(at 107.95 229.87)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f01df374-1eed-439f-a5b2-9b82b54f77f8")
-	)
-	(junction
 		(at 34.29 248.92)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f80e7e97-a04c-4532-bc2c-c5a7349dcae8")
-	)
-	(wire
-		(pts
-			(xy 113.03 229.87) (xy 121.92 229.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "005be359-5ced-4e36-a1b7-ee192fb48030")
 	)
 	(wire
 		(pts
@@ -1706,7 +1672,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 246.38) (xy 113.03 248.92)
+			(xy 113.03 242.57) (xy 113.03 248.92)
 		)
 		(stroke
 			(width 0)
@@ -1856,16 +1822,6 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 243.84) (xy 95.25 248.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13a15a36-a33b-4dca-a66c-cb737aac9ca6")
-	)
-	(wire
-		(pts
 			(xy 386.08 21.59) (xy 402.59 21.59)
 		)
 		(stroke
@@ -1873,16 +1829,6 @@
 			(type default)
 		)
 		(uuid "150c01f3-b2bc-44d1-a707-638a0e026bfd")
-	)
-	(wire
-		(pts
-			(xy 107.95 229.87) (xy 107.95 231.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18332584-5c89-451d-b569-4821dc68de75")
 	)
 	(wire
 		(pts
@@ -1903,6 +1849,16 @@
 			(type default)
 		)
 		(uuid "1b3d852b-ea27-48ea-b226-5135960b1565")
+	)
+	(wire
+		(pts
+			(xy 113.03 228.6) (xy 127 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cc0c98b-b516-4736-a661-e68eb81c9f93")
 	)
 	(wire
 		(pts
@@ -1946,7 +1902,17 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 248.92) (xy 77.47 248.92)
+			(xy 107.95 248.92) (xy 113.03 248.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22308588-02e8-453a-8ee4-717b5d788079")
+	)
+	(wire
+		(pts
+			(xy 67.31 248.92) (xy 86.36 248.92)
 		)
 		(stroke
 			(width 0)
@@ -1983,6 +1949,16 @@
 			(type default)
 		)
 		(uuid "321906be-86de-42af-b95d-7d8a03e8228e")
+	)
+	(wire
+		(pts
+			(xy 113.03 228.6) (xy 113.03 234.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33be08ab-d2e4-49da-8dee-52b44206f9d8")
 	)
 	(wire
 		(pts
@@ -2026,26 +2002,6 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 248.92) (xy 86.36 248.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e53b0b0-8ac1-49e0-bab1-f4a30c75e716")
-	)
-	(wire
-		(pts
-			(xy 107.95 229.87) (xy 113.03 229.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e702f91-0267-4a22-b4b0-fa55b26f19d1")
-	)
-	(wire
-		(pts
 			(xy 62.23 248.92) (xy 67.31 248.92)
 		)
 		(stroke
@@ -2056,7 +2012,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 189.23) (xy 312.42 189.23)
+			(xy 113.03 189.23) (xy 312.42 189.23)
 		)
 		(stroke
 			(width 0)
@@ -2093,6 +2049,16 @@
 			(type default)
 		)
 		(uuid "5c766562-b6ae-4fa5-9dd3-cc7bf0613935")
+	)
+	(wire
+		(pts
+			(xy 113.03 248.92) (xy 214.63 248.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f5fab18-0b09-4079-90a9-9b70cd3169e3")
 	)
 	(wire
 		(pts
@@ -2146,6 +2112,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 228.6) (xy 113.03 228.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72ae8f2d-9764-4d0b-af42-7d7c4b08ee8b")
+	)
+	(wire
+		(pts
 			(xy 375.92 173.99) (xy 375.92 248.92)
 		)
 		(stroke
@@ -2183,16 +2159,6 @@
 			(type default)
 		)
 		(uuid "7e12e1d8-4407-4192-b1c6-807107f73de2")
-	)
-	(wire
-		(pts
-			(xy 121.92 229.87) (xy 121.92 189.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e17cce8-036c-4081-acd3-86fa41d46adb")
 	)
 	(wire
 		(pts
@@ -2306,6 +2272,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 228.6) (xy 107.95 234.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b533d42-ee50-41ea-9b5d-f0b329fcb5e6")
+	)
+	(wire
+		(pts
 			(xy 386.08 179.07) (xy 386.08 21.59)
 		)
 		(stroke
@@ -2346,16 +2322,6 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 243.84) (xy 77.47 248.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abbafea8-0c48-4a8f-b261-a0471de97e51")
-	)
-	(wire
-		(pts
 			(xy 293.37 222.25) (xy 307.34 222.25)
 		)
 		(stroke
@@ -2366,7 +2332,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 220.98) (xy 107.95 19.05)
+			(xy 107.95 215.9) (xy 107.95 19.05)
 		)
 		(stroke
 			(width 0)
@@ -2526,16 +2492,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 248.92) (xy 95.25 248.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cb35139c-bc64-4743-ad92-27d99faf5741")
-	)
-	(wire
-		(pts
 			(xy 246.38 236.22) (xy 246.38 214.63)
 		)
 		(stroke
@@ -2606,7 +2562,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 238.76) (xy 107.95 248.92)
+			(xy 107.95 242.57) (xy 107.95 248.92)
 		)
 		(stroke
 			(width 0)
@@ -2666,7 +2622,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 229.87) (xy 113.03 238.76)
+			(xy 113.03 189.23) (xy 113.03 228.6)
 		)
 		(stroke
 			(width 0)
@@ -2726,7 +2682,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 248.92) (xy 214.63 248.92)
+			(xy 86.36 248.92) (xy 107.95 248.92)
 		)
 		(stroke
 			(width 0)
@@ -2736,7 +2692,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 228.6) (xy 107.95 229.87)
+			(xy 107.95 223.52) (xy 107.95 228.6)
 		)
 		(stroke
 			(width 0)
@@ -2825,7 +2781,7 @@
 		(uuid "175d405c-ed1f-4f76-a0e2-f9eb416acfa5")
 	)
 	(label "V_usb_avail"
-		(at 120.65 229.87 180)
+		(at 127 228.6 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2886,7 +2842,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 107.95 234.95 0)
+		(at 107.95 238.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2896,7 +2852,7 @@
 		(dnp no)
 		(uuid "1c98780d-2c2d-494c-8fe3-5b6344a9507c")
 		(property "Reference" "R30"
-			(at 105.664 237.49 90)
+			(at 105.664 241.3 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2907,7 +2863,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 107.95 236.474 90)
+			(at 107.95 240.284 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2918,7 +2874,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 106.172 234.95 90)
+			(at 106.172 238.76 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2929,7 +2885,7 @@
 			)
 		)
 		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579706381316128768-C25804.pdf?response-content-disposition=attachment%3B%20filename%3DC25804.pdf%3B%20filename%2A%3DUTF-8%27%27C25804.pdf&x-oss-date=20260604T182440Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nhDvTiu55L8aayRHLFsEERZtthpKj%2B0Dz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qeRniENA4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWhri1Udu3tHD0eS19jklBdzSlusJRAJJUVBflCeKEaRNSAd3WGhEfM2%2BBt4QT30w5N2u00S8OSMIOONBvqKWD5sagAGpldF62iBeHzrNV%2BHnUyjaA64BCjacRbVbSjmxSgiuNX1d%2FbCnqQV25prdqNhtDbAKCoRnNQDFNxmhLIIUUcffM9eG3oRc44RNhyi7hADN6z1ILjt6TEoRuXkDAYH1u8iyrE2YQDMkq7F3Cke8dxQ44PYZqWefci6GHDzQ1pzPpiAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZTENVVAjFdYFTtTADjTMKmU2%2F20260604%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=78c2b620008555fdaf271c3d0b7682edd0aca7d23428d31f63338848e1713cab"
-			(at 107.95 234.95 0)
+			(at 107.95 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2940,7 +2896,7 @@
 			)
 		)
 		(property "Description" "C25804"
-			(at 107.95 234.95 0)
+			(at 107.95 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2997,7 +2953,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
 			(at 82.55 243.84 0)
 			(hide yes)
 			(show_name no)
@@ -3008,7 +2964,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579709112556240896-C32677.pdf?response-content-disposition=attachment%3B%20filename%3DC32677.pdf%3B%20filename%2A%3DUTF-8%27%27C32677.pdf&x-oss-date=20260624T201321Z&x-oss-expires=3600&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5nFI%2FzTn71iwqTTNBTIkkoiQewViYnDujz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qZNkpz9G4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWgrsXvZNYnSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkILYtWeaKWD5sagAGUbjwITrjCC5sBnEC9CYkbd9T6Som%2FnrVo%2FvgpTq6WHD0fxVBgRjLjIBsnt%2F5obXx4vdE81FMDtHGlHIpkoB5rnOMmP0OzcNEOpMbUGlXAP8uielascx6Pd2aDMZQxX%2Fx%2BsJa7Ys39oSeMQ16dRLpIGfL4ByYvLkNYN%2BPsaY1LjSAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NZphFgrbCuf862yvJwMc9fLhX%2F20260624%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=9480db59a86a2b479bcb7106af5b4c85f569c86243deb47ee028b74f791fe5ab"
 			(at 82.55 243.84 0)
 			(hide yes)
 			(show_name no)
@@ -3019,7 +2975,7 @@
 				)
 			)
 		)
-		(property "Description" "Bidirectional dual transient-voltage-suppression diode, center on pin 3"
+		(property "Description" "C32677"
 			(at 86.36 243.84 0)
 			(hide yes)
 			(show_name no)
@@ -3131,7 +3087,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 107.95 224.79 180)
+		(at 107.95 219.71 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3141,7 +3097,7 @@
 		(dnp no)
 		(uuid "74080e60-45d7-43b0-8ef5-d9e231426cd3")
 		(property "Reference" "R29"
-			(at 110.236 222.25 90)
+			(at 110.236 217.17 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3152,7 +3108,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 107.95 223.266 90)
+			(at 107.95 218.186 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3163,7 +3119,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 109.728 224.79 90)
+			(at 109.728 219.71 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3174,7 +3130,7 @@
 			)
 		)
 		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579706364622934016-C25819.pdf?response-content-disposition=attachment%3B%20filename%3DC25819.pdf%3B%20filename%2A%3DUTF-8%27%27C25819.pdf&x-oss-date=20260607T210642Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5ryH8PCprRbhIysal7ylzcBXuxKqZznuzz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qbxek0BD4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWkpjUPw8wnSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIuzN54aKWD5sagAFXqr37yeC6i73JtnWyrAPWlFlD7%2BO4v6D0kklJkfR4ZNWYY%2FJmHaMvh5XgKe69Y2VVwh3FQXeQc9N3YnYUCwlUFj7ysfoRU0zIPvuKAhEOT3qEObty6yli3txhJK%2BkEcQ4NQs%2FlNRRqPdiq%2BB4j8AoteNyHTVnRr3qFmKb96GmHCAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NYGTyvKkz3NGhxCs7TRcfFYLY%2F20260607%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=d302d6996d62a00132e559a883be9b5fca7841b1eb7e44c91ba09bae985432b1"
-			(at 107.95 224.79 0)
+			(at 107.95 219.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3185,7 +3141,7 @@
 			)
 		)
 		(property "Description" "C25819"
-			(at 107.95 224.79 0)
+			(at 107.95 219.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3361,7 +3317,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 113.03 242.57 0)
+		(at 113.03 238.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3371,7 +3327,7 @@
 		(dnp no)
 		(uuid "a33e86f4-88dc-4359-8999-ded5b8c0ef8f")
 		(property "Reference" "C19"
-			(at 113.538 240.538 0)
+			(at 113.538 236.728 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3382,7 +3338,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 113.538 245.11 0)
+			(at 113.538 241.3 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3393,7 +3349,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 113.9952 246.38 0)
+			(at 113.9952 242.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3404,7 +3360,7 @@
 			)
 		)
 		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8556213788455567360-C15849.pdf?response-content-disposition=attachment%3B%20filename%3DC15849.pdf%3B%20filename%2A%3DUTF-8%27%27C15849.pdf&x-oss-date=20260604T201738Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5rnDe%2F5h6h02fGfW1HcsFYmaelfp6rpszz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qeACnUZA4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWhqD30JB3tHD0eS19jklBdzSlusJRAJJUVBflCeKEaRNSAd3WGhEfM2%2BBt4QT30w5N2u00S8OSMIc%2BkdiqKWD5sagAFWQNkecW6D1E4coUzPadT7SCc3f42V3X5rSfMFH84ElX%2BTmNGNYscgqDx0xyaTJyyrM%2BFQW4w%2FhWX4qrYQWwgwoGw%2BQzNTMlILHbcsYIbLhGAndRWnhNlBy%2F%2FsrfRbXWVyCjftSb4xwrnr%2BixQsq7hkcXqmYOc23lG%2B0BooZpCuSAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NYRFUMjwUn3tYwmTVsefsHoBQ%2F20260604%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=f7f3fdbb1b5574cda7c663cf4e84bef841ee38f93673a2b4cff19ca4130e6e09"
-			(at 113.03 242.57 0)
+			(at 113.03 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3415,7 +3371,7 @@
 			)
 		)
 		(property "Description" "C15849"
-			(at 113.03 242.57 0)
+			(at 113.03 238.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
