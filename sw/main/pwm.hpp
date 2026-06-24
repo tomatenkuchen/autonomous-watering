@@ -36,7 +36,7 @@ public:
 private:
   // Prepare and then apply the LEDC PWM timer configuration
   ledc_timer_config_t ledc_timer = {
-      .speed_mode = LEDC_SPEED_MODE_MAX,
+      .speed_mode = LEDC_LOW_SPEED_MODE,
       .duty_resolution = LEDC_TIMER_13_BIT, // Set duty resolution to 13 bits
       .timer_num = LEDC_TIMER_0,
       .freq_hz = 40'000,
@@ -46,7 +46,7 @@ private:
 
   ledc_channel_config_t ledc_channel_usb = {
       .gpio_num = 18,
-      .speed_mode = LEDC_SPEED_MODE_MAX,
+      .speed_mode = LEDC_LOW_SPEED_MODE,
       .channel = LEDC_CHANNEL_0,
       .intr_type = LEDC_INTR_DISABLE,
       .timer_sel = LEDC_TIMER_0,
@@ -62,7 +62,7 @@ private:
 
   ledc_channel_config_t ledc_channel_solar = {
       .gpio_num = 20,
-      .speed_mode = LEDC_SPEED_MODE_MAX,
+      .speed_mode = LEDC_LOW_SPEED_MODE,
       .channel = LEDC_CHANNEL_1,
       .intr_type = LEDC_INTR_DISABLE,
       .timer_sel = LEDC_TIMER_0,
@@ -78,7 +78,7 @@ private:
 
   ledc_channel_config_t ledc_channel_conductivity = {
       .gpio_num = 22,
-      .speed_mode = LEDC_SPEED_MODE_MAX,
+      .speed_mode = LEDC_LOW_SPEED_MODE,
       .channel = LEDC_CHANNEL_2,
       .intr_type = LEDC_INTR_DISABLE,
       .timer_sel = LEDC_TIMER_0,
