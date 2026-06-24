@@ -75,8 +75,8 @@ extern "C" void app_main() {
 
   bsp::pwm::Pwm pwm;
 
-  uint16_t duty = 1000;
-  bool valves = false;
+  uint16_t duty = 0;
+  bool valvestate = false;
 
   bsp::valves::Valves valves;
 
@@ -96,10 +96,10 @@ extern "C" void app_main() {
     // pwm.set_solar_duty(duty);
     pwm.set_conductivity_duty(duty);
 
-    // duty += 1000;
+    duty += 100;
 
-    valves.enable_valve_1(valves);
-    valves.enable_valve_2(valves);
-    valves = !valves;
+    valves.enable_valve_1(valvestate);
+    valves.enable_valve_2(valvestate);
+    valvestate = !valvestate;
   }
 }

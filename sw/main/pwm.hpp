@@ -14,7 +14,6 @@ namespace bsp::pwm {
 class Pwm {
 public:
   Pwm();
-  ~Pwm();
 
   /**
    * @brief set PWM duty cycle for usb
