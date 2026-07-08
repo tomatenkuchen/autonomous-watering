@@ -2246,6 +2246,12 @@
 		(uuid "2af0b535-681c-4a8a-8787-39e6a38e1b17")
 	)
 	(junction
+		(at 250.19 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "307b386f-51dc-4d7a-8fdf-3f6b271eb409")
+	)
+	(junction
 		(at 27.94 21.59)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2256,6 +2262,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4d8f5fce-5e5a-4c3a-9214-e6d3481a3052")
+	)
+	(junction
+		(at 250.19 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e22b6bc-d157-42ef-a483-361aa99dbfd2")
 	)
 	(junction
 		(at 153.67 21.59)
@@ -2408,10 +2420,22 @@
 		(uuid "f323f243-749e-458e-ade9-e231a5069587")
 	)
 	(junction
+		(at 237.49 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4dd333d-2872-488e-a9c2-47f0563bd250")
+	)
+	(junction
 		(at 208.28 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f8c8e928-fa90-4bb0-a4c6-4a0c42b5a4f2")
+	)
+	(junction
+		(at 250.19 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f9c3179b-e35b-4473-86c7-4086a62601bf")
 	)
 	(wire
 		(pts
@@ -2425,7 +2449,17 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 77.47) (xy 247.65 82.55)
+			(xy 250.19 77.47) (xy 247.65 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "006559e7-0c30-411f-b9cb-f5ee24ca92d6")
+	)
+	(wire
+		(pts
+			(xy 250.19 77.47) (xy 250.19 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2565,6 +2599,26 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 77.47) (xy 237.49 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2abcf207-cec7-47ae-a9cc-62b58d5fea92")
+	)
+	(wire
+		(pts
+			(xy 250.19 152.4) (xy 261.62 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d905576-0283-43d7-8aa6-39d0f0aff5e9")
+	)
+	(wire
+		(pts
 			(xy 43.18 134.62) (xy 35.56 134.62)
 		)
 		(stroke
@@ -2622,6 +2676,16 @@
 			(type default)
 		)
 		(uuid "4688ec43-cbba-4c34-b839-e4249c107236")
+	)
+	(wire
+		(pts
+			(xy 237.49 91.44) (xy 237.49 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "468c4d52-6a52-4312-9e91-60141f89d813")
 	)
 	(wire
 		(pts
@@ -2775,6 +2839,16 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 77.47) (xy 240.03 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6486e2f9-eac7-427a-a9d7-7e20d334dc39")
+	)
+	(wire
+		(pts
 			(xy 219.71 96.52) (xy 219.71 152.4)
 		)
 		(stroke
@@ -2835,7 +2909,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 77.47) (xy 240.03 77.47)
+			(xy 181.61 77.47) (xy 237.49 77.47)
 		)
 		(stroke
 			(width 0)
@@ -2885,7 +2959,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 152.4) (xy 261.62 152.4)
+			(xy 241.3 152.4) (xy 250.19 152.4)
 		)
 		(stroke
 			(width 0)
@@ -2945,7 +3019,7 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 82.55) (xy 240.03 82.55)
+			(xy 240.03 82.55) (xy 250.19 82.55)
 		)
 		(stroke
 			(width 0)
@@ -3125,6 +3199,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 92.71) (xy 250.19 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5e3ea90-58f4-442e-b6e4-162be37a1971")
+	)
+	(wire
+		(pts
 			(xy 113.03 92.71) (xy 115.57 92.71)
 		)
 		(stroke
@@ -3255,6 +3339,16 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 92.71) (xy 250.19 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b12ac120-79e2-49b6-8a93-d2e3a2397358")
+	)
+	(wire
+		(pts
 			(xy 181.61 95.25) (xy 182.88 95.25)
 		)
 		(stroke
@@ -3292,6 +3386,16 @@
 			(type default)
 		)
 		(uuid "c00e91b2-f84d-442a-bb22-62c6ee156701")
+	)
+	(wire
+		(pts
+			(xy 250.19 82.55) (xy 250.19 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0a2fb58-122a-4795-aff7-cb0ba295692c")
 	)
 	(wire
 		(pts
@@ -3412,6 +3516,16 @@
 			(type default)
 		)
 		(uuid "dcbfcbe6-0073-46a7-a58a-83e8f2241989")
+	)
+	(wire
+		(pts
+			(xy 237.49 92.71) (xy 250.19 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddfc8939-9f9e-4b2b-b0ca-22bdd88e7e4f")
 	)
 	(wire
 		(pts
@@ -4223,6 +4337,87 @@
 			(project "watering"
 				(path "/cfeeaa6f-be25-403f-b03c-39be367d5a74/16cf7c18-cb1d-41f0-89f2-0e82671466a1"
 					(reference "SW3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 237.49 87.63 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "248b8afd-f6a9-42f3-8470-38422fd2078a")
+		(property "Reference" "C4"
+			(at 237.998 85.598 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "15p"
+			(at 237.998 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 238.4552 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579707088031322112-C1644.pdf?response-content-disposition=attachment%3B%20filename%3DC1644.pdf%3B%20filename%2A%3DUTF-8%27%27C1644.pdf&x-oss-date=20260604T163100Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5rgEov%2B1Z5Y5IPeVHLE03MEOcpBm6iagzz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qaJ7%2B39A4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWsrkxPosAnSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIBfjYxKKWD5sagAGJZBLg4dXI2cxwZhpjHr9vfG2bcnPeD2ZekO6CLDE470zoyla87k22%2FMfMgD7nSJvKHKZxx7wRTJR2C%2FIed5gUddUWOOyzyialMQCX42pgq2cGFbW2xRzddJF8rKP5p2z7HTq0AIZLZQQExEqwnA3Me1xxudMxwbz09i63yKlbRSAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NYUY1J8AySA5VTu7sQ5Emtm1a%2F20260604%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=109c785d79e03152fdf94f4c516b6f023346208cc221ea347ff8b9c49b90e1dd"
+			(at 237.49 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "C1644"
+			(at 237.49 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "931fadff-24fb-4f11-8caf-23a372dbca5f")
+		)
+		(pin "2"
+			(uuid "0e89a011-c584-47e6-8616-446f7dda45fb")
+		)
+		(instances
+			(project "watering"
+				(path "/cfeeaa6f-be25-403f-b03c-39be367d5a74/16cf7c18-cb1d-41f0-89f2-0e82671466a1"
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -5600,6 +5795,87 @@
 			(project "watering"
 				(path "/cfeeaa6f-be25-403f-b03c-39be367d5a74/16cf7c18-cb1d-41f0-89f2-0e82671466a1"
 					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 250.19 87.63 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e9954e6c-7fc4-45f5-b924-7fbec8bc2233")
+		(property "Reference" "C3"
+			(at 250.698 85.598 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "15p"
+			(at 250.698 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 251.1552 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://jlc-prod-smt.oss-eu-central-1.aliyuncs.com/smtDataManualFile/8579707088031322112-C1644.pdf?response-content-disposition=attachment%3B%20filename%3DC1644.pdf%3B%20filename%2A%3DUTF-8%27%27C1644.pdf&x-oss-date=20260604T163100Z&x-oss-expires=1800&x-oss-security-token=CAISgAN1q6Ft5B2yfSjIr5rgEov%2B1Z5Y5IPeVHLE03MEOcpBm6iagzz2IHhMdHJsAOodtv0%2FmmhT6PkclqRLcbhpcmfjV%2BZHzLB8qaJ7%2B39A4J7b16cNrbH4M4H6aXeirtuwDsz9SNTCALjPD3nPii50x5bjaDymRCbLGJaViJlhHLN1Ow6jdmhpCctxLAlvo9NgFxm3D%2Fu2NQPwiWf9FVdhvhEG6Vly8qOi2MaRmFy8yFTx0b0SvJ%2BjYMrmPctoN9JnSdC5mfdzau3a1TJ84gRD0a5wkaVA1zbDs5bfISEIuUzebreLqY03dV4mOvdqIcMe8qigz88fk%2FfIioH6xyxKOexoSCnFTOiiupCcQLPyao9jLu6iayqViY7QaIOTqQohZmkAMwVOasAsI3Ngh4zF97Qt0cVNkXO9gWfLI8DtuMleWsrkxPosAnSgc5lCkRRYwGs1287ugXlSQzo890KPDAEovaKCnZ2ZSfh7Y4sNknI6i%2Bfc2Se2MIkIBfjYxKKWD5sagAGJZBLg4dXI2cxwZhpjHr9vfG2bcnPeD2ZekO6CLDE470zoyla87k22%2FMfMgD7nSJvKHKZxx7wRTJR2C%2FIed5gUddUWOOyzyialMQCX42pgq2cGFbW2xRzddJF8rKP5p2z7HTq0AIZLZQQExEqwnA3Me1xxudMxwbz09i63yKlbRSAA&x-oss-signature-version=OSS4-HMAC-SHA256&x-oss-credential=STS.NYUY1J8AySA5VTu7sQ5Emtm1a%2F20260604%2Feu-central-1%2Foss%2Faliyun_v4_request&x-oss-signature=109c785d79e03152fdf94f4c516b6f023346208cc221ea347ff8b9c49b90e1dd"
+			(at 250.19 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "C1644"
+			(at 250.19 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b6960cd5-8dc2-4f67-8b18-40ff5d5fc8a5")
+		)
+		(pin "2"
+			(uuid "d13fa7a2-8d96-41a8-9a6a-b47da3fc45d7")
+		)
+		(instances
+			(project "watering"
+				(path "/cfeeaa6f-be25-403f-b03c-39be367d5a74/16cf7c18-cb1d-41f0-89f2-0e82671466a1"
+					(reference "C3")
 					(unit 1)
 				)
 			)

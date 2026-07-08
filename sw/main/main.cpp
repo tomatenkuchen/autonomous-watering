@@ -61,14 +61,14 @@ enum AdcInputs
 auto is_usb_voltage_online() -> bool
 {
     gpio_config_t v_usb_gpio = {
-        .pin_bit_mask = 1 << 19,
+        .pin_bit_mask = 1 << 21,
         .mode = GPIO_MODE_INPUT,
         .pull_up_en = GPIO_PULLUP_DISABLE,
         .pull_down_en = GPIO_PULLDOWN_ENABLE,
         .intr_type = GPIO_INTR_DISABLE,
     };
     ESP_ERROR_CHECK(gpio_config(&v_usb_gpio));
-    return gpio_get_level(GPIO_NUM_19) == 1;
+    return gpio_get_level(GPIO_NUM_21) == 1;
 }
 
 } // namespace
@@ -94,17 +94,16 @@ extern "C" void app_main()
         adc.get_voltage_mV(i_conductivity);
         adc.get_voltage_mV(v_battery);
 
-        // ESP_LOGI(TAG, "USB voltage online: %s",
-        //          is_usb_voltage_online() ? "yes" : "no");
+        ESP_LOGI(TAG, "USB voltage online: %s", is_usb_voltage_online() ? "yes" : "no");
 
         // // pwm.set_usb_duty(duty);
         // // pwm.set_solar_duty(duty);
-        // pwm.set_conductivity_duty(duty);
+        pwm.set_conductivity_duty(duty);
 
-        // duty += 100;
+        duty += 8192;
 
-        // valves.enable_valve_1(valvestate);
+        valves.enable_valve_1(!valvestate);
         // valves.enable_valve_2(valvestate);
-        // valvestate = !valvestate;
+        valvestate = !valvestate;
     }
 }

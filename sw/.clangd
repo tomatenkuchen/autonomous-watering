@@ -1,0 +1,14 @@
+---
+# Configure clangd to place its cache inside the project's build folder.
+# Relative paths are resolved from the workspace root.
+Cache:
+  Directory: build/.cache/clangd
+
+# Optional: enable background index for better code intelligence
+Index:
+  Background: true
+
+CompileFlags:
+  Add: []
+
+EOF
