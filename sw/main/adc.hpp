@@ -12,6 +12,8 @@
 #include <cstdint>
 #include <ranges>
 
+#pragma once
+
 namespace bsp::adc
 {
 

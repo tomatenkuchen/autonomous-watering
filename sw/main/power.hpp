@@ -31,7 +31,7 @@ class Power
 
     Power();
 
-    auto get_voltage_mV(AdcInputs input) -> std::uin16_t;
+    auto get_voltage_mV(AdcInputs input) -> std::uint16_t;
 
     auto get_current_mA(AdcInputs input) -> std::uint16_t;
 
@@ -40,7 +40,7 @@ class Power
     auto is_usb_voltage_online() -> bool;
 
   private:
-    std::array<bsp::adc::ChannelConfig, 5> adc_channels = {
+    constexpr static std::array<adc::ChannelConfig, 5> adc_channels = {
         {
             {
                 .channel = ADC_CHANNEL_2,
