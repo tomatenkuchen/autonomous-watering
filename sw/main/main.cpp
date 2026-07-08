@@ -3,84 +3,24 @@
  * @brief entry point of executable
  */
 
-#include "adc.hpp"
-#include "driver/gpio.h"
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "hal/adc_types.h"
-#include "pwm.hpp"
-#include "soc/soc_caps.h"
+#include "power.hpp"
 #include "valves.hpp"
-#include <array>
 
 namespace
 {
 
 const static char *TAG = "main";
 
-std::array<bsp::adc::ChannelConfig, 5> adc_channels = {
-    {
-        {
-            .channel = ADC_CHANNEL_2,
-            .atten = ADC_ATTEN_DB_0,
-            .bitwidth = ADC_BITWIDTH_12,
-        },
-        {
-            .channel = ADC_CHANNEL_3,
-            .atten = ADC_ATTEN_DB_0,
-            .bitwidth = ADC_BITWIDTH_12,
-        },
-        {
-            .channel = ADC_CHANNEL_4,
-            .atten = ADC_ATTEN_DB_0,
-            .bitwidth = ADC_BITWIDTH_12,
-        },
-        {
-            .channel = ADC_CHANNEL_5,
-            .atten = ADC_ATTEN_DB_0,
-            .bitwidth = ADC_BITWIDTH_12,
-        },
-        {
-            .channel = ADC_CHANNEL_6,
-            .atten = ADC_ATTEN_DB_0,
-            .bitwidth = ADC_BITWIDTH_12,
-        },
-    },
-};
-
-enum AdcInputs
-{
-    i_usb,
-    i_solar,
-    v_solar,
-    i_conductivity,
-    v_battery,
-};
-
-auto is_usb_voltage_online() -> bool
-{
-    gpio_config_t v_usb_gpio = {
-        .pin_bit_mask = 1 << 21,
-        .mode = GPIO_MODE_INPUT,
-        .pull_up_en = GPIO_PULLUP_DISABLE,
-        .pull_down_en = GPIO_PULLDOWN_ENABLE,
-        .intr_type = GPIO_INTR_DISABLE,
-    };
-    ESP_ERROR_CHECK(gpio_config(&v_usb_gpio));
-    return gpio_get_level(GPIO_NUM_21) == 1;
-}
-
 } // namespace
 
 extern "C" void app_main()
 {
-    bsp::adc::Adc<5> adc(ADC_UNIT_1, adc_channels);
+    bsp::Power power;
 
-    bsp::pwm::Pwm pwm;
-
-    uint16_t duty = 0;
-    bool valvestate = false;
+    std::uint16_t v_cond_out_mV = 0;
 
     bsp::valves::Valves valves;
 
@@ -88,22 +28,19 @@ extern "C" void app_main()
     {
         ESP_LOGI(TAG, "main loop");
         vTaskDelay(pdMS_TO_TICKS(1000));
-        adc.get_voltage_mV(i_usb);
-        adc.get_voltage_mV(i_solar);
-        adc.get_voltage_mV(v_solar);
-        adc.get_voltage_mV(i_conductivity);
-        adc.get_voltage_mV(v_battery);
 
-        ESP_LOGI(TAG, "USB voltage online: %s", is_usb_voltage_online() ? "yes" : "no");
+        ESP_LOGI(TAG, "USB voltage online: %s", power.is_usb_voltage_online() ? "yes" : "no");
 
-        // // pwm.set_usb_duty(duty);
-        // // pwm.set_solar_duty(duty);
-        pwm.set_conductivity_duty(duty);
+        ESP_LOGI(TAG, "voltages: \n\tsolar: %d mV\n\tbattery: %dmV\n\n",
+                 power.get_voltage_mV(bsp::Power::AdcInputs::v_solar),
+                 power.get_voltage_mV(bsp::Power::AdcInputs::v_battery));
 
-        duty += 8192;
+        ESP_LOGI(TAG, "currents: \n\tsolar: %d mA\n\tconductivity: %dmA\n\tusb: %d mA\n\n",
+                 power.get_voltage_mV(bsp::Power::AdcInputs::i_solar),
+                 power.get_voltage_mV(bsp::Power::AdcInputs::i_conductivity),
+                 power.get_voltage_mV(bsp::Power::AdcInputs::i_usb));
 
-        valves.enable_valve_1(!valvestate);
-        // valves.enable_valve_2(valvestate);
-        valvestate = !valvestate;
+        v_cond_out_mV += 1024;
+        power.set_conductivity_voltage_mV(v_cond_out_mV);
     }
 }
