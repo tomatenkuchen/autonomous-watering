@@ -1,7 +1,13 @@
 #include "pwm.hpp"
+#include "driver/gpio.h"
 
 namespace bsp::pwm
 {
+
+namespace
+{
+gpio_num_t const enable_pin = GPIO_NUM_19;
+}
 
 Pwm::Pwm()
 {
@@ -9,6 +15,11 @@ Pwm::Pwm()
     ESP_ERROR_CHECK(ledc_channel_config(&ledc_channel_usb));
     ESP_ERROR_CHECK(ledc_channel_config(&ledc_channel_solar));
     ESP_ERROR_CHECK(ledc_channel_config(&ledc_channel_conductivity));
+
+    // set gpio for enableing pwm module
+    gpio_set_direction(enable_pin, GPIO_MODE_OUTPUT);
+    // off by default
+    gpio_set_level(enable_pin, 0);
 }
 
 auto Pwm::set_usb_duty(uint16_t duty) -> void
@@ -34,6 +45,11 @@ auto Pwm::set_duty(ledc_mode_t speed_mode, ledc_channel_t channel, std::uint16_t
     ESP_ERROR_CHECK(ledc_set_duty(speed_mode, channel, duty_in));
     // Update duty to apply the new value
     ESP_ERROR_CHECK(ledc_update_duty(speed_mode, channel));
+}
+
+auto Pwm::enable(bool enable) -> void
+{
+    gpio_set_level(enable_pin, enable ? 1 : 0);
 }
 
 } // namespace bsp::pwm

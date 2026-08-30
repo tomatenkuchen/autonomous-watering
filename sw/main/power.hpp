@@ -39,6 +39,10 @@ class Power
 
     auto is_usb_voltage_online() -> bool;
 
+    auto set_usb_current_ref_mA(std::int32_t duty) -> void;
+
+    auto set_solar_current_ref_mA(std::int32_t duty) -> void;
+
   private:
     constexpr static std::array<adc::ChannelConfig, 5> adc_channels = {
         {

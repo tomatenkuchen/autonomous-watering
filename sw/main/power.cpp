@@ -80,4 +80,38 @@ auto Power::is_usb_voltage_online() -> bool
     return gpio_get_level(GPIO_NUM_21) == 1;
 }
 
+auto Power::set_usb_current_ref_mA(std::int32_t current_mA) -> void
+{
+    if (current_mA < 0)
+    {
+        current_mA = 0;
+    }
+    if (current_mA == 0)
+    {
+        pwm.enable(false);
+        return;
+    }
+
+    pwm.enable(true);
+    // controller here
+    pwm.set_usb_duty(duty);
+}
+
+auto Power::set_solar_current_ref_mA(std::int32_t current_mA) -> void
+{
+    if (current_mA < 0)
+    {
+        current_mA = 0;
+    }
+    if (current_mA == 0)
+    {
+        pwm.enable(false);
+        return;
+    }
+
+    pwm.enable(true);
+    // controller here
+    pwm.set_solar_duty(duty);
+}
+
 } // namespace bsp

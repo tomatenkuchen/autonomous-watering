@@ -35,6 +35,9 @@ class Pwm
      */
     void set_conductivity_duty(uint16_t duty);
 
+    /** enable or disable pwm module entirely */
+    auto enable(bool enable) -> void;
+
   private:
     // Prepare and then apply the LEDC PWM timer configuration
     ledc_timer_config_t ledc_timer = {
