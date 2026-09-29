@@ -7,6 +7,7 @@
 #pragma once
 
 #include "adc.hpp"
+#include "controller_pid.hpp"
 #include "driver/gpio.h"
 #include "esp_log.h"
 #include "hal/adc_types.h"
@@ -15,67 +16,66 @@
 #include <array>
 #include <cstdint>
 
-namespace bsp
-{
-class Power
-{
-  public:
-    enum AdcInputs
-    {
-        i_usb,
-        i_solar,
-        v_solar,
-        i_conductivity,
-        v_battery,
-    };
+namespace bsp {
+class Power {
+public:
+  enum AdcInputs {
+    i_usb,
+    i_solar,
+    v_solar,
+    i_conductivity,
+    v_battery,
+  };
 
-    Power();
+  Power();
 
-    auto get_voltage_mV(AdcInputs input) -> std::uint16_t;
+  auto get_voltage_mV(AdcInputs input) -> std::uint16_t;
 
-    auto get_current_mA(AdcInputs input) -> std::uint16_t;
+  auto get_current_mA(AdcInputs input) -> std::uint16_t;
 
-    auto set_conductivity_voltage_mV(std::uint16_t output_mV) -> void;
+  auto set_conductivity_voltage_mV(std::uint16_t output_mV) -> void;
 
-    auto is_usb_voltage_online() -> bool;
+  auto is_usb_voltage_online() -> bool;
 
-    auto set_usb_current_ref_mA(std::int32_t duty) -> void;
+  auto set_usb_current_ref_mA(std::int32_t duty) -> void;
 
-    auto set_solar_current_ref_mA(std::int32_t duty) -> void;
+  auto set_solar_current_ref_mA(std::int32_t duty) -> void;
 
-  private:
-    constexpr static std::array<adc::ChannelConfig, 5> adc_channels = {
-        {
-            {
-                .channel = ADC_CHANNEL_2,
-                .atten = ADC_ATTEN_DB_0,
-                .bitwidth = ADC_BITWIDTH_12,
-            },
-            {
-                .channel = ADC_CHANNEL_3,
-                .atten = ADC_ATTEN_DB_0,
-                .bitwidth = ADC_BITWIDTH_12,
-            },
-            {
-                .channel = ADC_CHANNEL_4,
-                .atten = ADC_ATTEN_DB_0,
-                .bitwidth = ADC_BITWIDTH_12,
-            },
-            {
-                .channel = ADC_CHANNEL_5,
-                .atten = ADC_ATTEN_DB_0,
-                .bitwidth = ADC_BITWIDTH_12,
-            },
-            {
-                .channel = ADC_CHANNEL_6,
-                .atten = ADC_ATTEN_DB_0,
-                .bitwidth = ADC_BITWIDTH_12,
-            },
-        },
-    };
+private:
+  constexpr static std::array<adc::ChannelConfig, 5> adc_channels = {
+      {
+          {
+              .channel = ADC_CHANNEL_2,
+              .atten = ADC_ATTEN_DB_0,
+              .bitwidth = ADC_BITWIDTH_12,
+          },
+          {
+              .channel = ADC_CHANNEL_3,
+              .atten = ADC_ATTEN_DB_0,
+              .bitwidth = ADC_BITWIDTH_12,
+          },
+          {
+              .channel = ADC_CHANNEL_4,
+              .atten = ADC_ATTEN_DB_0,
+              .bitwidth = ADC_BITWIDTH_12,
+          },
+          {
+              .channel = ADC_CHANNEL_5,
+              .atten = ADC_ATTEN_DB_0,
+              .bitwidth = ADC_BITWIDTH_12,
+          },
+          {
+              .channel = ADC_CHANNEL_6,
+              .atten = ADC_ATTEN_DB_0,
+              .bitwidth = ADC_BITWIDTH_12,
+          },
+      },
+  };
 
-    bsp::adc::Adc<5> adc;
+  bsp::adc::Adc<5> adc;
 
-    bsp::pwm::Pwm pwm;
+  bsp::pwm::Pwm pwm;
+
+  ControllerPID<float> pid_usb{1.f, {65535, 0}, {0.1f, 0}, {0.01f, 0}};
 };
 } // namespace bsp
