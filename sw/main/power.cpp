@@ -92,7 +92,6 @@ auto Power::set_usb_current_ref_mA(std::int32_t current_mA) -> void {
            current_mA, i_usb_mA, error_mA, pid_usb_duty);
 
   // controller here
-  pwm.set_usb_duty(pid_usb_duty);
 }
 
 auto Power::set_solar_current_ref_mA(std::int32_t current_mA) -> void {
@@ -103,10 +102,21 @@ auto Power::set_solar_current_ref_mA(std::int32_t current_mA) -> void {
     pwm.enable(false);
     return;
   }
+  auto const cell_voltage_mV = get_voltage_mV(AdcInputs::v_battery);
+
+  if (cell_voltage_mV > 4'300) {
+    ESP_LOGW(TAG, "solar voltage too high: %d mV", cell_voltage_mV);
+    pwm.enable(false);
+    return;
+  }
+
+  ESP_LOGI(TAG, "battery voltage: %d mV", cell_voltage_mV);
 
   pwm.enable(true);
   // controller here
-  pwm.set_solar_duty(32768);
+  auto const d = 62'000;
+  pwm.set_solar_duty(d);
+  pwm.set_usb_duty(d);
 }
 
 } // namespace bsp

@@ -77,5 +77,6 @@ private:
   bsp::pwm::Pwm pwm;
 
   ControllerPID<float> pid_usb{1.f, {65535, 0}, {0.1f, 0}, {0.01f, 0}};
+  ControllerPID<float> pid_solar{1.f, {65535, 0}, {0.1f, 0}, {0.01f, 0}};
 };
 } // namespace bsp

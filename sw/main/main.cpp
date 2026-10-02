@@ -31,17 +31,10 @@ extern "C" void app_main() {
   bsp::Power power;
   power_ptr = &power;
 
-  std::uint16_t v_cond_out_mV = 0;
-
-  bsp::valves::Valves valves;
-
-  std::uint8_t valve_cnt = 0;
-
   while (true) {
-    ESP_LOGI(TAG, "main loop");
-    vTaskDelay(pdMS_TO_TICKS(10));
+    vTaskDelay(pdMS_TO_TICKS(10'000));
 
     // power transfer to battery
-    power.set_usb_current_ref_mA(100);
+    power.set_solar_current_ref_mA(1);
   }
 }

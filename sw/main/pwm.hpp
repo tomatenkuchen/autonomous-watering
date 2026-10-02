@@ -40,9 +40,9 @@ private:
   // Prepare and then apply the LEDC PWM timer configuration
   ledc_timer_config_t ledc_timer = {
       .speed_mode = LEDC_LOW_SPEED_MODE,
-      .duty_resolution = LEDC_TIMER_11_BIT, // Set duty resolution to 11 bits
+      .duty_resolution = LEDC_TIMER_10_BIT, // Set duty resolution to 11 bits
       .timer_num = LEDC_TIMER_0,
-      .freq_hz = 19'000,
+      .freq_hz = 78'125,
       .clk_cfg = LEDC_AUTO_CLK,
       .deconfigure = false,
   };

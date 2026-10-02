@@ -1505,12 +1505,6 @@
 		(uuid "11dcec03-3c2f-4f71-9796-79bd6f02fa34")
 	)
 	(junction
-		(at 259.08 24.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "151ca0b2-54fd-4482-8369-090c4733e58e")
-	)
-	(junction
 		(at 58.42 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1529,16 +1523,16 @@
 		(uuid "5c7ca96f-674e-4ed0-b506-2def28fb41f5")
 	)
 	(junction
+		(at 170.18 21.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5faf2b3a-6dc5-4212-b1ad-fc8ea2bf4a0f")
+	)
+	(junction
 		(at 255.27 248.92)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "66c4fee2-f034-41b7-a2a3-5f16c84dcc5e")
-	)
-	(junction
-		(at 170.18 24.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8286a547-fc04-4cff-907d-74584e43714e")
 	)
 	(junction
 		(at 170.18 248.92)
@@ -1898,16 +1892,6 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 179.07) (xy 259.08 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "38fb3a4c-1d41-4eb8-9b8d-b4d570cd3546")
-	)
-	(wire
-		(pts
 			(xy 233.68 220.98) (xy 233.68 196.85)
 		)
 		(stroke
@@ -2088,16 +2072,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 24.13) (xy 259.08 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7cf0423e-69b7-492e-bec2-9af0baeb250e")
-	)
-	(wire
-		(pts
 			(xy 67.31 242.57) (xy 67.31 248.92)
 		)
 		(stroke
@@ -2108,7 +2082,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 203.2) (xy 170.18 24.13)
+			(xy 170.18 203.2) (xy 170.18 21.59)
 		)
 		(stroke
 			(width 0)
@@ -2328,16 +2302,6 @@
 	)
 	(wire
 		(pts
-			(xy 21.59 24.13) (xy 170.18 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bdaa56c2-7990-4a49-9c47-8410f0e3b5cf")
-	)
-	(wire
-		(pts
 			(xy 95.25 173.99) (xy 95.25 243.84)
 		)
 		(stroke
@@ -2528,16 +2492,6 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 24.13) (xy 402.59 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e72d3ce5-43b6-485d-8773-8a590930e935")
-	)
-	(wire
-		(pts
 			(xy 62.23 160.02) (xy 62.23 19.05)
 		)
 		(stroke
@@ -2646,16 +2600,6 @@
 		)
 		(uuid "175d405c-ed1f-4f76-a0e2-f9eb416acfa5")
 	)
-	(label "V_bat"
-		(at 21.59 24.13 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1eb3b74d-231e-4e16-9e98-d647e04d9422")
-	)
 	(label "V_usb_avail"
 		(at 127 227.33 180)
 		(effects
@@ -2715,16 +2659,6 @@
 			(justify right bottom)
 		)
 		(uuid "aede8a1e-d47b-4a8e-baee-37f737b622a8")
-	)
-	(label "V_bat"
-		(at 402.59 24.13 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b0215e23-78a0-4955-89c3-fe138479798d")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -3885,7 +3819,7 @@
 				(justify left top)
 			)
 		)
-		(pin "+3V3" bidirectional
+		(pin "+3V3" input
 			(at 254 179.07 90)
 			(uuid "5482ac34-293a-49e7-833a-fd859bd19ff1")
 			(effects
@@ -3895,7 +3829,7 @@
 				(justify right)
 			)
 		)
-		(pin "+5V" bidirectional
+		(pin "+5V" input
 			(at 256.54 179.07 90)
 			(uuid "9b0ae4a1-5b4f-4118-a455-071bc83279ab")
 			(effects
@@ -3983,16 +3917,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(pin "V_bat" bidirectional
-			(at 259.08 179.07 90)
-			(uuid "5023af7f-5bee-49e9-848c-322a28f7b6f8")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 		(instances
