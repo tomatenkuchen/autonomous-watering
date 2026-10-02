@@ -1023,7 +1023,7 @@
 		(uuid "fbb1661c-1818-45b4-921c-850e1e658f03")
 	)
 	(hierarchical_label "i_out"
-		(shape input)
+		(shape output)
 		(at 113.03 91.44 0)
 		(effects
 			(font

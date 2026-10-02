@@ -2998,7 +2998,7 @@
 				(justify right)
 			)
 		)
-		(pin "i_out" input
+		(pin "i_out" output
 			(at 176.53 129.54 0)
 			(uuid "04fa0d40-1350-48b3-a72d-49f3eb740c10")
 			(effects
