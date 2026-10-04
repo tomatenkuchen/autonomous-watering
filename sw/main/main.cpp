@@ -36,12 +36,12 @@ extern "C" void app_main() {
   bsp::Power power;
 
   mqtt_server::ServerConfig server_config{
-      .ip_address = {192, 168, 1, 100},
-      .port = 1883,
+      .ip_address = mqtt_server::local_config::mqtt_broker_ip,
+      .port = mqtt_server::local_config::mqtt_broker_port,
   };
   mqtt_server::WifiCredentials wifi_credentials{
-      .ssid = "YOUR_WIFI_SSID",
-      .password = "YOUR_WIFI_PASSWORD",
+      .ssid = mqtt_server::local_config::wifi_ssid,
+      .password = mqtt_server::local_config::wifi_password,
   };
 
   mqtt_server::Iface iface{

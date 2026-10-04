@@ -11,6 +11,7 @@
 
 #pragma once
 
+#include "local_credentials.hpp"
 #include <array>
 #include <cstdint>
 #include <functional>

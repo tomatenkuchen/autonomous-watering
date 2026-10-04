@@ -3,3 +3,6 @@ build/
 CMakeUserPresets.json
 .cache/
 managed_components/
+credentials
+/credentials.json
+/main/credentials.hpp

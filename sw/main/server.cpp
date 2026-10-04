@@ -153,24 +153,20 @@ auto temp_publish_task(void *pvParameters) -> void {
   while (true) {
     // Read hardware temperature
     auto const tsens_out = iface.get_temperature_celsius();
-    char temp_str[256];
-    std::snprintf(temp_str, sizeof(temp_str), "\"temperature\": %d",
-                  static_cast<int>(tsens_out));
+    char temp_str[15];
+    std::snprintf(temp_str, sizeof(temp_str), "%.1f", tsens_out);
 
     // Publish to topic: sensors/esp32c6/temperature
     int const msg_id = esp_mqtt_client_publish(
         mqtt_client, "sensors/esp32c6/temperature", temp_str, 0, 1, 0);
-
-    ESP_LOGI(TAG, "published temp %.2f °C, msg_id=%d", tsens_out, msg_id);
+    ESP_LOGI(TAG, "published temp %.1f °C, msg_id=%d", tsens_out, msg_id);
 
     auto const battery_voltage = iface.get_battery_voltage_mV();
-    char battery_str[256];
-    std::snprintf(battery_str, sizeof(battery_str), "\"battery_voltage\": %ld",
-                  battery_voltage);
+    char battery_str[15];
+    std::snprintf(battery_str, sizeof(battery_str), "%ld", battery_voltage);
     int const battery_msg_id = esp_mqtt_client_publish(
         mqtt_client, "sensors/esp32c6/battery_voltage", battery_str, 0, 1, 0);
-
-    ESP_LOGI(TAG, "published battery voltage %.2f V, msg_id=%d",
+    ESP_LOGI(TAG, "published battery voltage %ld mV, msg_id=%d",
              battery_voltage, battery_msg_id);
 
     freertos::delay(5s);
