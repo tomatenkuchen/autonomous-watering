@@ -54,22 +54,18 @@ auto wifi_init_sta(credentials::Wifi const &creds) -> esp_err_t {
 
   wifi_config_t wifi_config{};
 
-  // Copy SSID and password into wifi_config
-  const size_t ssid_length = creds.ssid.length();
-  const size_t password_length = creds.password.length();
-
   // check if the lengths are within the limits of the wifi_config struct
-  if (ssid_length > sizeof(wifi_config.sta.ssid) ||
-      password_length > sizeof(wifi_config.sta.password)) {
+  if (creds.ssid.length() > sizeof(wifi_config.sta.ssid) ||
+      creds.password.length() > sizeof(wifi_config.sta.password)) {
     return ESP_ERR_INVALID_SIZE;
   }
 
-  std::memcpy(wifi_config.sta.ssid, creds.ssid.c_str(), ssid_length);
-  std::memcpy(wifi_config.sta.password, creds.password.c_str(),
-              password_length);
+  std::memcpy(wifi_config.sta.ssid, creds.ssid.data(), creds.ssid.length());
+  std::memcpy(wifi_config.sta.password, creds.password.data(),
+              creds.password.length());
 
   wifi_config.sta.threshold.authmode =
-      password_length == 0 ? WIFI_AUTH_OPEN : WIFI_AUTH_WPA2_PSK;
+      creds.password.length() == 0 ? WIFI_AUTH_OPEN : WIFI_AUTH_WPA2_PSK;
   wifi_config.sta.pmf_cfg.capable = true;
 
   ESP_RETURN_ON_ERROR(esp_netif_init(), TAG, "Failed to initialize netif");
@@ -186,8 +182,7 @@ auto nvs_init() -> void {
 } // namespace
 
 auto start(credentials::Server const &config,
-           credentials::Wifi const &credentials, Iface _iface = Iface{})
-    -> void {
+           credentials::Wifi const &credentials, Iface _iface) -> void {
   nvs_init();
 
   iface = _iface;
