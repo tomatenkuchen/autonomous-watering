@@ -8,6 +8,7 @@
 #include "mqtt_client.h"
 #include "nvs_flash.h"
 #include <chrono>
+#include <cstdio>
 #include <cstring>
 #include <format>
 
@@ -126,12 +127,13 @@ auto mqtt_event_handler(void *handler_args, esp_event_base_t base,
 
 // Initialize MQTT Client
 auto mqtt_app_start(ServerConfig const &config) -> void {
-  auto const url = std::format("mqtt://{}.{}.{}.{}:{}", config.ip_address[0],
-                               config.ip_address[1], config.ip_address[2],
-                               config.ip_address[3], config.port);
+  char url[256];
+  std::snprintf(url, sizeof(url), "mqtt://%d.%d.%d.%d:%d", config.ip_address[0],
+                config.ip_address[1], config.ip_address[2],
+                config.ip_address[3], config.port);
 
   esp_mqtt_client_config_t mqtt_cfg = {};
-  mqtt_cfg.broker.address.uri = url.c_str();
+  mqtt_cfg.broker.address.uri = url;
 
   mqtt_client = esp_mqtt_client_init(&mqtt_cfg);
   esp_mqtt_client_register_event(
@@ -151,21 +153,22 @@ auto temp_publish_task(void *pvParameters) -> void {
   while (true) {
     // Read hardware temperature
     auto const tsens_out = iface.get_temperature_celsius();
-    auto const temp_str =
-        std::format("\"temperature\": {}", static_cast<int>(tsens_out));
+    char temp_str[256];
+    std::snprintf(temp_str, sizeof(temp_str), "\"temperature\": %d",
+                  static_cast<int>(tsens_out));
 
     // Publish to topic: sensors/esp32c6/temperature
     int const msg_id = esp_mqtt_client_publish(
-        mqtt_client, "sensors/esp32c6/temperature", temp_str.c_str(), 0, 1, 0);
+        mqtt_client, "sensors/esp32c6/temperature", temp_str, 0, 1, 0);
 
     ESP_LOGI(TAG, "published temp %.2f °C, msg_id=%d", tsens_out, msg_id);
 
     auto const battery_voltage = iface.get_battery_voltage_mV();
-    auto const battery_str =
-        std::format("\"battery_voltage\": {}", battery_voltage);
-    int const battery_msg_id =
-        esp_mqtt_client_publish(mqtt_client, "sensors/esp32c6/battery_voltage",
-                                battery_str.c_str(), 0, 1, 0);
+    char battery_str[256];
+    std::snprintf(battery_str, sizeof(battery_str), "\"battery_voltage\": %ld",
+                  battery_voltage);
+    int const battery_msg_id = esp_mqtt_client_publish(
+        mqtt_client, "sensors/esp32c6/battery_voltage", battery_str, 0, 1, 0);
 
     ESP_LOGI(TAG, "published battery voltage %.2f V, msg_id=%d",
              battery_voltage, battery_msg_id);
