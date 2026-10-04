@@ -7,6 +7,7 @@
 #pragma once
 
 #include <cstdint>
+#include <string_view>
 
 namespace version {
 
@@ -20,11 +21,15 @@ struct Version {
 // clang-format off
 
 constexpr static Version version = {
-    .major = @autonomous-watering_VERSION_MAJOR@,
-    .minor = @autonomous-watering_VERSION_MINOR@,
-    .patch = @autonomous-watering_VERSION_PATCH@,
-    .tweak = @autonomous-watering_VERSION_TWEAK@,
+    .major = @CONAN_PROJECT_VERSION_MAJOR@,
+    .minor = @CONAN_PROJECT_VERSION_MINOR@,
+    .patch = @CONAN_PROJECT_VERSION_PATCH@,
+    .tweak = @CONAN_PROJECT_VERSION_TWEAK@,
 };
+
+constexpr static std::string_view version_string = "@CONAN_PROJECT_VERSION@";
+constexpr static std::string_view project_name = "@CONAN_PROJECT_NAME@";
+constexpr static std::string_view project_description = "@CONAN_PROJECT_DESCRIPTION@";
 
 // clang-format on
 

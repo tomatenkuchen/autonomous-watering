@@ -54,7 +54,7 @@ class autonomous_wateringRecipe(ConanFile):
             f"set(CONAN_PROJECT_VERSION_PATCH {version_str[2]})\n"
             f"set(CONAN_PROJECT_VERSION_TWEAK {version_str[3]})\n"
             f"set(CONAN_PROJECT_NAME {self.name})\n"
-            f"set(CONAN_PROJECT_DESCRIPTION {self.description})\n"
+            f"set(CONAN_PROJECT_DESCRIPTION \"{self.description}\")\n"
         )
 
         tc.generate()

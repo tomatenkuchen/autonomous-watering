@@ -47,7 +47,7 @@ auto wifi_event_handler(void *handler_args, esp_event_base_t event_base,
   }
 }
 
-auto wifi_init_sta(WifiCredentials const &creds) -> esp_err_t {
+auto wifi_init_sta(credentials::Wifi const &creds) -> esp_err_t {
   if (creds.ssid.empty()) {
     return ESP_ERR_INVALID_ARG;
   }
@@ -126,7 +126,7 @@ auto mqtt_event_handler(void *handler_args, esp_event_base_t base,
 }
 
 // Initialize MQTT Client
-auto mqtt_app_start(ServerConfig const &config) -> void {
+auto mqtt_app_start(credentials::Server const &config) -> void {
   char url[256];
   std::snprintf(url, sizeof(url), "mqtt://%d.%d.%d.%d:%d", config.ip_address[0],
                 config.ip_address[1], config.ip_address[2],
@@ -185,8 +185,9 @@ auto nvs_init() -> void {
 
 } // namespace
 
-auto start(ServerConfig const &config, WifiCredentials const &credentials,
-           Iface _iface) -> void {
+auto start(credentials::Server const &config,
+           credentials::Wifi const &credentials, Iface _iface = Iface{})
+    -> void {
   nvs_init();
 
   iface = _iface;

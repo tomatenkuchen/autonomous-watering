@@ -24,7 +24,8 @@ struct Iface {
   std::function<std::int32_t()> get_battery_voltage_mV = [] { return 0; };
 };
 
-auto start(ServerConfig const &config, WifiCredentials const &credentials,
-           Iface _iface = Iface{}) -> void;
+auto start(credentials::Server const &config,
+           credentials::Wifi const &credentials, Iface _iface = Iface{})
+    -> void;
 
 } // namespace mqtt_server

@@ -4,6 +4,7 @@
  */
 
 #include "adc.hpp"
+#include "credentials.hpp"
 #include "driver/temperature_sensor.h"
 #include "esp_log.h"
 #include "freertos.hpp"
@@ -35,15 +36,6 @@ extern "C" void app_main() {
 
   bsp::Power power;
 
-  mqtt_server::ServerConfig server_config{
-      .ip_address = mqtt_server::local_config::mqtt_broker_ip,
-      .port = mqtt_server::local_config::mqtt_broker_port,
-  };
-  mqtt_server::WifiCredentials wifi_credentials{
-      .ssid = mqtt_server::local_config::wifi_ssid,
-      .password = mqtt_server::local_config::wifi_password,
-  };
-
   mqtt_server::Iface iface{
       .get_temperature_celsius =
           [] {
@@ -57,7 +49,8 @@ extern "C" void app_main() {
           },
   };
 
-  mqtt_server::start(server_config, wifi_credentials, iface);
+  mqtt_server::start(credentials::server_config, credentials::wifi_credentials,
+                     iface);
 
   while (true) {
     // power transfer to battery

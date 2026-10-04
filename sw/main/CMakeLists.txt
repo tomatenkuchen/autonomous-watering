@@ -19,7 +19,7 @@ idf_component_register(
 
   INCLUDE_DIRS 
     "."
-    "${CMAKE_BINARY_DIR}/generated"
+    "${CMAKE_BINARY_DIR}"
 )
 
 target_link_libraries(${COMPONENT_LIB}

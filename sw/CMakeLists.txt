@@ -35,10 +35,10 @@ project(${CONAN_PROJECT_NAME}
 
 configure_file(
    ${CMAKE_SOURCE_DIR}/cmake/version.hpp.in
-   ${CMAKE_BINARY_DIR}/generated/version.hpp
+   ${CMAKE_BINARY_DIR}/version.hpp
 )
 
 configure_file(
    ${CMAKE_SOURCE_DIR}/cmake/credentials.hpp.in
-   ${CMAKE_BINARY_DIR}/generated/credentials.hpp
+   ${CMAKE_BINARY_DIR}/credentials.hpp
 )
