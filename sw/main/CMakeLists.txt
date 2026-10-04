@@ -1,7 +1,24 @@
 idf_component_register(
-  SRCS "main.cpp" "pwm.cpp" "power.cpp"
-  PRIV_REQUIRES esp_adc esp_driver_ledc esp_driver_gpio esp_pm
-  INCLUDE_DIRS "."
+  SRCS 
+    "main.cpp" 
+    "pwm.cpp" 
+    "power.cpp" 
+    "server.cpp"
+
+  PRIV_REQUIRES 
+    esp_adc 
+    esp_driver_gpio 
+    esp_driver_ledc 
+    esp_driver_tsens
+    esp_event
+    esp_netif
+    esp_pm
+    esp_wifi
+    mqtt 
+    nvs_flash 
+
+  INCLUDE_DIRS 
+    "."
 )
 
 target_link_libraries(${COMPONENT_LIB}
