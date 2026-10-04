@@ -11,23 +11,13 @@
 
 #pragma once
 
-#include "local_credentials.hpp"
+#include "credentials.hpp"
 #include <array>
 #include <cstdint>
 #include <functional>
 #include <string>
 
 namespace mqtt_server {
-
-struct ServerConfig {
-  std::array<std::uint8_t, 4> ip_address;
-  std::uint16_t port;
-};
-
-struct WifiCredentials {
-  std::string ssid;
-  std::string password;
-};
 
 struct Iface {
   std::function<float()> get_temperature_celsius = [] { return -273.2f; };

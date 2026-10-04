@@ -8,19 +8,24 @@
 
 #include <cstdint>
 
-namespace version{
+namespace version {
 
-	struct Version{
-		uint8_t major;
-		uint8_t minor;
-		uint8_t patch;
-		uint8_t tweak;
-	};
+struct Version {
+  uint8_t major;
+  uint8_t minor;
+  uint8_t patch;
+  uint8_t tweak;
+};
 
-	constexpr static Version version = {
-		.major = @autonomous-watering_VERSION_MAJOR@,
-		.minor = @autonomous-watering_VERSION_MINOR@,
-		.patch = @autonomous-watering_VERSION_PATCH@,
-		.tweak = @autonomous-watering_VERSION_TWEAK@,
-	};
-}
+// clang-format off
+
+constexpr static Version version = {
+    .major = @autonomous-watering_VERSION_MAJOR@,
+    .minor = @autonomous-watering_VERSION_MINOR@,
+    .patch = @autonomous-watering_VERSION_PATCH@,
+    .tweak = @autonomous-watering_VERSION_TWEAK@,
+};
+
+// clang-format on
+
+} // namespace version
